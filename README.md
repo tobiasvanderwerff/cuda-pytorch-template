@@ -1,6 +1,6 @@
 # CUDA + PyTorch template
 
-A clean and simple template for developing CUDA kernels and testing them in Python/PyTorch 🚀🚀.
+A clean and simple template for developing CUDA C++ kernels and testing them in Python/PyTorch 🚀🚀.
 
 Tested on Ubuntu 20.04.
 
@@ -23,7 +23,7 @@ Tested on Ubuntu 20.04.
 
 ## 💻 Installation
 
-First, install CUDA and PyTorch. The preferred way to install CUDA is through Conda (see [here](https://x.com/jeremyphoward/status/1697435241152127369)). Also not that you will need an Nvidia GPU to run this.
+First, install CUDA and PyTorch. The preferred way to install CUDA is through Conda (see [here](https://x.com/jeremyphoward/status/1697435241152127369)). Also note that you will need an Nvidia GPU to run this.
 
 ```shell
 conda create -n cuda-kernels  # create a new Conda environment
@@ -40,7 +40,9 @@ pip install -r requirements.txt
 
 ## 🔥 How to run
 
-The first step is to compile your kernels, which is done by running `setup.py`:
+This repo contains two sample CUDA kernels that you can use as a starting point: `csrc/square.cu` and `csrc/matmul.cu`.
+
+The first step is to compile the kernels, which is done by running `setup.py`.
 
 ```shell
 python setup.py install
@@ -50,19 +52,21 @@ This will automatically compile the source files found in `csrc`. Note that ever
 
 Once you've compiled, you can use the provided scripts to:
 
-1. Test your kernel(s):
+1. Test your kernels:
 
     ```shell
     pytest -v -s
     ```
 
-2. Benchmark your kernel(s):
+2. Benchmark your kernels:
 
     ```shell
     python benchmark.py
     ```
 
-Now, you can start hacking away at your own CUDA kernels!
+These two commands should work out of the box for the two kernels mentioned above.
+
+That's it! Now, you can start hacking away and create your own CUDA kernels.
 
 ## Detailed profiling
 
