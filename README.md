@@ -9,14 +9,14 @@ Tested on Ubuntu 20.04.
 ```
 .
 ├── README.md
-├── benchmark.py  // use this script to benchmark your kernels
-├── csrc  // C/C++ CUDA files
-│   ├── api.cpp  // define the Python interface here
+├── benchmark.py   // use this script to benchmark your kernels
+├── csrc           // C/C++ CUDA files
+│   ├── api.cpp    // define the Python interface here
 │   ├── matmul.cu  // a sample CUDA kernel
 │   └── square.cu  // another sample CUDA kernel
 ├── requirements.txt
-├── setup.py  // your code is compiled through this script
-└── tests  // test the correctness of your kernels here
+├── setup.py       // your code is compiled through this script
+└── tests          // test the correctness of your kernels here
     ├── test_matmul.py
     └── test_square.py
 ```
